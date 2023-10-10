@@ -1,0 +1,386 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 全局样式 */
+#top {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#top dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#top dd {
+    margin-right: 20px;
+}
+
+#search {
+    width: 200px;
+    margin-left: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #top dl {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #search {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #twonav {
+        text-align: center;
+    }
+    
+    #twonav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #main #title {
+        font-size: 24px;
+    }
+
+    #nav ul li {
+        font-size: 16px;
+    }
+
+    #lunbo {
+        width: 100%;
+    }
+}
+
+/* Responsive style for smaller screens */
+@media (max-width: 480px) {
+    #top dd {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #search {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+#top {
+	background-color: white;
+	margin: auto;
+}
+
+#top dd:first-child {
+	width: 200px;
+	line-height: 130px;
+}
+
+#top dd:first-child img {
+	width: auto;
+	height: 40px;
+}
+
+
+#top dd {
+	height: 100px;
+	width: 100px;
+	text-align: center;
+	float: left;
+}
+
+#top dd a {
+	font-size: 18px;
+	line-height: 95px;
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+
+}
+
+#top dd:hover a {
+	color: #dd8b10;
+}
+
+/* Music hall*/
+#top dd:nth-of-type(2) a {
+	color: white;
+	background-color: #dd8b10;
+}
+
+/* Search */
+#top dd:nth-of-type(7) {
+	width: 200px;
+	margin-left: 30px;
+}
+
+#top dd:nth-of-type(7) input {
+	height: 40px;
+	width: 200px;
+	margin-top: 30px;
+	padding: 5px;
+	border-radius: 5%;
+	border: 1px #C9C9C9 solid;
+}
+
+/* Login*/
+#top dd:nth-of-type(8) a {
+	font-size: 16px
+}
+
+
+/* Secondary navigation */
+#twonav {
+	margin-left: 200px;
+	width: 800px;
+	height: 40px;
+}
+
+#twonav li {
+	float: left;
+	margin-left: 45px;
+	list-style: none;
+}
+
+#twonav li:first-of-type {
+	margin-left: 35px;
+}
+
+#twonav li a {
+	line-height: 40px;
+	color: black;
+	text-decoration: none;
+}
+
+#twonav li a:hover {
+	color: #dd8b10;
+}
+
+
+/* Recommendedplaylists */
+
+
+#main {
+	overflow: hidden;
+	width: 1300px;
+	margin: auto;
+	background: linear-gradient(#f2f2f2, #fafafa);
+	position: relative;
+}
+
+#main #title {
+	height: 70px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 70px;
+	color: #333333;
+	margin-top: 40px;
+	position: relative;
+	top: -15px;
+}
+
+#main #title span {
+	margin-left: 10px;
+}
+
+#main #nav {
+	width: 500px;
+	margin: auto;
+}
+
+#main #nav ul {
+	width: 1000px;
+	height: 50px;
+	margin: auto;
+}
+
+#main #nav ul li {
+	overflow: hidden;
+	position: relative;
+	float: left;
+	list-style: none;
+	margin-left: 30px;
+}
+
+#main #nav ul li a {
+	color: black;
+	text-decoration: none;
+}
+
+#main #nav ul li a:hover {
+	color: #dd8b10;
+}
+
+#main #lunbo {
+	height: 260px;
+	width: 1040px;
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+#main #lunbo ul {
+	width: 2520px;
+	height: 260px;
+	position: absolute;
+
+}
+
+#main #lunbo ul li {
+
+	position: relative;
+	height: 200px;
+	width: 200px;
+	list-style: none;
+	margin-right: 10px;
+	float: left;
+
+}
+
+#lunbomain li span {
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	left: 0px;
+	transition: .3s linear;
+}
+
+#lunbomain li span:first-child {
+	overflow: hidden;
+}
+
+#main #pic {
+	position: absolute;
+	z-index: 2;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 75px;
+	left: 75px;
+	opacity: 0;
+	transition: all .5s linear;
+}
+
+#main #lunbo ul li img {
+	transition: all .3s linear;
+}
+
+#main #lunbo ul li:hover img {
+	transform: scale(1.05);
+}
+
+#main #lunbo ul li:hover #pic {
+	opacity: 1;
+	transform: scale(1.5);
+}
+
+#main #lunbo ul li:hover span {
+	background: rgba(50, 50, 50, 0.2);
+}
+
+#lunbomain li p a {
+	text-decoration: none;
+	color: black;
+}
+
+#lunbomain li p a:hover {
+	color: #dd8b10;
+}
+
+img {
+	height: 200px;
+	height: 200px;
+}
+
+#lunbo ul li p {
+	padding-top: 10px;
+	font-size: 14px;
+	margin-top: 200px;
+	line-height: 25px;
+}
+
+#lunbo ul li p span {
+	color: #9f9e9f;
+}
+
+#main {
+	position: relative;
+	
+}
+
+#main #left {
+	position: absolute;
+	z-index: 1;
+	top: 200px;
+	left: -122px;
+	width: 80px;
+	height: 100px;
+}
+
+#main #right {
+	position: absolute;
+	right: 0px;
+	top: 200px;
+	z-index: 1;
+	width: 80px;
+	left: 1340px;
+	height: 100px;
+}
+
+#main #navdian a {
+	height: 50px;
+	margin: 10px;
+}
+
+#main #navdian a:hover span {
+	background-color: #afafaf;
+}
+#main #navdian a span {
+	list-style: none;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color: #e1e1e1;
+	border-radius: 50%;
+	margin: 20px 0px;
+	margin-top: 30px;
+
+}
+
+#main #navdian {
+	margin: 25px;
+	width: 100px;
+	margin-left: 600px;
+	background-color: #fafafa;
+	height: 55px;
+	overflow: hidden;
+}
+
+#main #lunbo ul li p:last-child {
+	position: absolute;
+	z-index: 10;
+	top: 25px;
+	height: 10px;
+	color: #999999;
+
+}
+	
